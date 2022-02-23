@@ -10,8 +10,8 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: |-
-        echo "//npm.pkg.github.com/:_authToken=$NPM_TOKEN" > .npmrc
-        echo "@IssaDiallo:registry=https://npm.pkg.github.com/" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=$NPM_TOKEN" > .npmrc
+          echo "@IssaDiallo:registry=https://npm.pkg.github.com/" >> .npmrc
 
       - run: npm install && npm publish
         env:
